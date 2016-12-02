@@ -13,9 +13,9 @@ if (file) {
 
   if ('indent_style' in config) {
     if (config.indent_style === 'tab') {
-      doc.autoExpandTab = false
+      doc.expandsTab = false
     } else if (config.indent_style === 'space') {
-      doc.autoExpandTab = true
+      doc.expandsTab = true
     }
   }
 
