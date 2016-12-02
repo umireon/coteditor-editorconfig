@@ -12,7 +12,11 @@ if (file) {
   var config = editorconfig.parseSync(file.toString())
 
   if ('indent_style' in config) {
-    // TODO: No way to implement
+    if (config.indent_style === 'tab') {
+      doc.autoExpandTab = false
+    } else if (config.indent_style === 'space') {
+      doc.autoExpandTab = true
+    }
   }
 
   if ('indent_size' in config) {
